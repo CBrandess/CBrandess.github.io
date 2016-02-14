@@ -56,6 +56,7 @@ header {
   height: 100px;
   background-color: #333;
   box-shadow: 0px 1px 20px #444;
+  z-index: 10;
 }
 
 header .logo {
@@ -103,6 +104,7 @@ header nav > ul > li {
 #title {
 	padding-top: 5%;
 	text-align: center;
+	z-index: 1;
 }
 
 .aboutmepage {
@@ -218,21 +220,8 @@ header nav > ul > li {
  	background-color: black;
  	margin-top: 0;
  	color: white;
- 	height: 725px;
  	padding: 2%;
-/*	position: relative;
-*/}
-
- .photos {
- 	text-align: center;
- }
-
- h2 {
- 	text-align: center;
- 	font-size: 30px;
- 	font-weight: bold;
- 	font-family: fantasy;
- }
+}
 
  #doorknob {
  	background-image: url('../images/DSC_0482.jpg');
@@ -242,101 +231,25 @@ header nav > ul > li {
  	width: 100%;
  }
 
-.israelnextimages {
+.nextimage {
 	display: none;
 }
 
-#israel1 {
-	height: 15%;
-	width: 22%;
+.photos > div {
+	width: 25%;
 	float: left;
-	padding: 3% 2%;
+	padding: 20px;
+}
+
+.photos > div > a {
 	display: inline-block;
+	height: 0;
+	padding-bottom: 50%;
+	overflow: hidden;
 }
 
-.italynextimage {
-	display: none;
-}
-
-#italy1 {
-	height: 15%;
-	width: 22%;
-	float: left;
-	padding: 3% 2%;
-	display: inline-block;
-
-}
-
-.icelandnextimage {
-	display: none;
-}
-
-#iceland1 {
-	height: 15%;
-	width: 22%;
-	float: left;
-	padding: 3% 2%;
-	display: inline-block;
-}
-
-.irelandnextimage {
-	display: none;
-}
-
-#ireland1 {
-	height: 15%;
-	width: 22%;
-	float: left;
-	padding: 3% 2%;
-	display: inline-block;
-}
-
-.sedonanextimage {
-	display: none;
-}
-
-#sedona1 {
-	height: 15%;
-	width: 22%;
-	float: left;
-	padding: 3% 2%;
-	display: inline-block;
-}
-
-.francenextimage {
-	display: none;
-}
-
-#france1 {
-	height: 15%;
-	width: 22%;
-	float: left;
-	padding: 3% 2%;
-	display: inline-block;
-}
-
-.sanfrannextimage {
-	display: none;
-}
-
-#sanfran1 {
-	height: 15%;
-	width: 22%;
-	float: left;
-	padding: 3% 2%;
-	display: inline-block;
-}
-
-.miscnextimage {
-	display: none;
-}
-
-#misc1 {
-	height: 15%;
-	width: 22%;
-	float: left;
-	padding: 3% 2%;
-	display: inline-block;
+.photos > div > a > img {
+	max-width: 100%;
 }
 
 #extender {
