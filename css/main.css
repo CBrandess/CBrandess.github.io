@@ -1,4 +1,354 @@
-body {
-	background-color: black;
-	color: white;
+/*
+Project Name: HTML Template
+Client: Your Client
+Author: Your Name
+Developer: @poopsplat in Chicago
+*/
+
+/******************************************
+/* SETUP
+/*******************************************/
+/* Box Model Hack: http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+*, *:before, *:after {
+  box-sizing: inherit;
 }
+html {
+  box-sizing: border-box;
+}
+/* Micro clearfix hack: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/******************************************
+/* BASE STYLES
+/*******************************************/
+body {
+	background-color: none;
+	color: white;
+/*	text-align: center;
+*/}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/******************************************
+/* SECTIONS
+/*******************************************/
+.headercontainer {
+  margin: 0 auto;
+  width: 100%;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #333;
+  box-shadow: 0px 1px 20px #444;
+}
+
+header .logo {
+  float: left;
+}
+
+header nav {
+  /* float: left; */
+  text-align: center;
+}
+
+header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+header nav ul li {
+  transition: background-color 0.2s ease-in-out;
+}
+header nav ul li:hover {
+  background-color: #000;
+}
+
+header nav ul li a {
+  display: block;
+  font-size: 17px;
+  padding: 39px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+header nav > ul > li {
+  float: left;
+  position: relative;
+}
+
+#logo {
+	width: auto;
+	height: 100px;
+}
+
+
+#title {
+	padding-top: 5%;
+	text-align: center;
+}
+
+.aboutmepage {
+	background-image: url('../images/DSC_0014_2.jpg');
+	background-color: transparent;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height:800px;
+	width: 100%;
+	position: absolute;
+	padding-bottom: 150px;
+}
+
+#aboutmeinfo {
+	margin: 25px;
+	padding-top: 100px;
+	margin-bottom: 10%;
+}
+
+#aboutme {
+	text-align: center;
+	width: 50%;
+	height: 75%;
+	padding: 25px;
+	margin-right: 100px;
+	float: right;
+	color: gray;
+	padding-top: 1%;
+}
+
+#aboutphotog {
+	text-shadow: .6px .6px black;
+	color: #C0C0C0;
+	font-family: fantasy;
+	vertical-align: center;
+}
+
+#carlybrandess {
+	float: left;
+	width: 20%;
+	height: 20%;
+	border: 5px solid #C0C0C0;
+	margin-left: 150px;
+	box-shadow: .6px .6px;
+	vertical-align: center;	
+}
+/*change colors of my title!*/
+#content {
+	height: 50%;
+	text-align: center;
+	font-family: serif didot;
+}
+
+#bannerpage {
+	position: relative;
+	height: 625px;
+	width: 100%;
+	margin-top: 100px;
+}
+
+/* Basic background image styling. */
+.background-image {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: fixed;
+}
+
+/* Styles for the alternating / transition effect. */
+.toggle-image {
+ 	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+ 	height: 625px;
+	transition: opacity 1s ease-in;
+	padding-bottom: 0;
+}
+
+/* Styles for the specific images. */
+.first-image {
+	background-image: url('../images/DSC_0057.jpg');	
+	z-index: -3;
+	opacity: 0;
+}
+
+.second-image {
+	background-image: url('../images/bannerimage2b.jpg');
+	z-index: -2;
+	opacity: 0;
+}
+
+.third-image {
+	background-image: url('../images/bannerimage2c.jpg');
+	z-index: -1;
+	opacity: 0;
+}
+
+.first-image.show {
+	opacity: 1;
+}
+
+.second-image.show {
+	opacity: 1;
+}
+
+.third-image.show {
+	opacity: 1;
+}
+
+ .photographypage {
+ 	background-color: black;
+ 	margin-top: 0;
+ 	color: white;
+ 	height: 725px;
+ 	padding: 2%;
+/*	position: relative;
+*/}
+
+ .photos {
+ 	text-align: center;
+ }
+
+ h2 {
+ 	text-align: center;
+ 	font-size: 30px;
+ 	font-weight: bold;
+ 	font-family: fantasy;
+ }
+
+ #doorknob {
+ 	background-image: url('../images/DSC_0482.jpg');
+ 	background-repeat: no-repeat;
+ 	background-size: cover;
+ 	height: 700px;
+ 	width: 100%;
+ }
+
+.israelnextimages {
+	display: none;
+}
+
+#israel1 {
+	height: 15%;
+	width: 22%;
+	float: left;
+	padding: 3% 2%;
+	display: inline-block;
+}
+
+.italynextimage {
+	display: none;
+}
+
+#italy1 {
+	height: 15%;
+	width: 22%;
+	float: left;
+	padding: 3% 2%;
+	display: inline-block;
+
+}
+
+.icelandnextimage {
+	display: none;
+}
+
+#iceland1 {
+	height: 15%;
+	width: 22%;
+	float: left;
+	padding: 3% 2%;
+	display: inline-block;
+}
+
+.irelandnextimage {
+	display: none;
+}
+
+#ireland1 {
+	height: 15%;
+	width: 22%;
+	float: left;
+	padding: 3% 2%;
+	display: inline-block;
+}
+
+.sedonanextimage {
+	display: none;
+}
+
+#sedona1 {
+	height: 15%;
+	width: 22%;
+	float: left;
+	padding: 3% 2%;
+	display: inline-block;
+}
+
+.francenextimage {
+	display: none;
+}
+
+#france1 {
+	height: 15%;
+	width: 22%;
+	float: left;
+	padding: 3% 2%;
+	display: inline-block;
+}
+
+.sanfrannextimage {
+	display: none;
+}
+
+#sanfran1 {
+	height: 15%;
+	width: 22%;
+	float: left;
+	padding: 3% 2%;
+	display: inline-block;
+}
+
+.miscnextimage {
+	display: none;
+}
+
+#misc1 {
+	height: 15%;
+	width: 22%;
+	float: left;
+	padding: 3% 2%;
+	display: inline-block;
+}
+
+#extender {
+	height: 100px;
+	width: 100%;
+	margin-bottom: 10%;
+}
+
+footer {
+	height: 200px;
+	width: 100%;
+	background-image: url('../images/ireland5.jpg');
+	background-repeat: no-repeat;
+}
+
