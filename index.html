@@ -8,20 +8,34 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/lightbox.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,800,700italic,400italic|PT+Sans:400,700,700italic|PT+Sans+Narrow:400,700|Quattrocento+Sans:400,700,700italic,400italic|Amaranth:400,400italic,700,700italic|Alice|Allerta+Stencil' rel='stylesheet' type='text/css'>
   <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
   <header>
     <div class="headercontainer">
       <div class="logo">
-        <a><img id='logo' src="images/92041_JPG_by_ClipartOfcom.jpg" alt="logo"></a>
+        <a><img id='logo' src="images/CBlogo.jpg" alt="logo"></a>
       </div>
       <nav>
         <ul>
-          <li><a href="*">Home</a></li>
-          <li><a href="*">Photography</a></li>
-          <li><a href="*">About Me</a>
-          <li><a href="*">Get in Touch</a></li>
+          <li><a href="index.html#bannerpage">Home</a></li>
+          <li><a href="index.html#phototop">Photography</a></li>
+          <li><a href="index.html#aboutmepage">About Me</a>
+          <li class="dropdown"><a class="dropdown-toggle getintouch" data-toggle="dropdown" href="#">Get in Touch</a>
+            <div class="dropdown-menu">
+              <form action="//formspree.io/carlybrandess@gmail.com" method="POST" data-parsley-validate>
+              <label for="name">Name:</label>
+              <input id="name" type="text" name="name" placeholder="Name" required="true" data-parsley-error-message="Please enter a name">
+              <label id="email" for="email">Email:</label>
+              <input type="email" name="_replyto" placeholder="Email" required="true" data-parsley-type="email" data-parsley-error-message="Please enter a valid email">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" cols="30" rows="10"></textarea>
+              <input type="hidden" name="_next" value="/thanks.html" />
+              <input type="submit" value="Send" class="button">
+            </form>
+       <!--    <li><a href="*">Get in Touch</a> -->
+          </li>
         </ul>
       </nav>
     </div>
@@ -29,21 +43,21 @@
   
   <div id="bannerpage">
     <div id="title">
-        <h1>Carly Brandess<br>Photography</h1>
+        <h1>CARLY BRANDESS<br>PHOTOGRAPHY</h1>
     </div>
 
     <div class="background-image toggle-image first-image show"></div>
     <div class="background-image toggle-image second-image"></div>
     <div class="background-image toggle-image third-image"></div>
-
   </div>
 
+  <div id="phototop"></div>
   <div class="photographypage clearfix">
-    <div id="photos clearfix">
+    <div class="photos clearfix">
       <div id="italy">
-        <div class="overlay wrapper">
-          <a href="images/italy1.jpg" data-lightbox="italy"><img id="italy1" src="images/italy1.jpg" alt="Walking Capri Couple"></a>
-        </div>
+          <a href="images/italy1.jpg" data-lightbox="italy" data-title="Italy">
+          <h3>Italy</h3>    
+          <img id="italy1" src="images/italy1.jpg" alt="Walking Capri Couple"></a>
         <span class=nextimage>
           <a href="images/Italy2.jpg" data-lightbox="italy">Image #2</a>
           <a href="images/italy3.jpg" data-lightbox="italy">Image #3</a>
@@ -63,7 +77,9 @@
       </div>
 
       <div id="iceland">
-          <a href="images/iceland1.jpg" data-lightbox="iceland"><img id="iceland1" src="images/iceland1.jpg" alt="Waterfall and Benches"></a>
+          <a href="images/iceland1.jpg" data-lightbox="iceland" data-title="Iceland">
+          <h3>Iceland</h3>
+          <img id="iceland1" src="images/iceland1.jpg" alt="Waterfall and Benches"></a>
         <span class=nextimage>
           <a href="images/iceland2.jpg" data-lightbox="iceland">Image #2</a>
           <a href="images/iceland3.jpg" data-lightbox="iceland">Image #3</a>
@@ -99,7 +115,9 @@
       </div>
 
       <div id="ireland">
-          <a href="images/ireland1.jpg" data-lightbox="ireland"><img id="ireland1" src="images/ireland1.jpg" alt="Abbey"></a>
+          <a href="images/ireland1.jpg" data-lightbox="ireland" data-title="Ireland">
+          <h3>Ireland</h3>
+          <img id="ireland1" src="images/ireland1.jpg" alt="Abbey"></a>
         <span class=nextimage>
           <a href="images/ireland2.jpg" data-lightbox="ireland">Image #2</a>
           <a href="images/ireland3.jpg" data-lightbox="ireland">Image #3</a>
@@ -130,7 +148,9 @@
       </div>
 
       <div id="israel">
-          <a href="images/israel26.jpg" data-lightbox="israel"><img id="israel1" src="images/israel26.jpg" alt="Jewish Star Window">
+          <a href="images/israel26.jpg" data-lightbox="israel" data-title="Israel">
+          <h3>Israel</h3>
+          <img id="israel1" src="images/israel26.jpg" alt="Jewish Star Window">
           </a>
         <span class=nextimage>
           <a href="images/israel6.jpg" data-lightbox="israel">Image #2</a>
@@ -154,7 +174,9 @@
       </div>
 
       <div id="sedona">
-          <a href="images/DSC_0057.jpg" data-lightbox="sedona"><img id="sedona1" src="images/DSC_0057.jpg" alt="Spider Web">
+          <a href="images/DSC_0057.jpg" data-lightbox="sedona" data-title="Sedona, Arizona">
+          <h3>Sedona, AZ</h3>
+          <img id="sedona1" src="images/DSC_0057.jpg" alt="Spider Web">
           </a>
         <span class=nextimage>
           <a href="images/sedona2.jpg" data-lightbox="sedona">Image #2</a>
@@ -169,7 +191,9 @@
       </div>
 
       <div id="france">
-          <a href="images/france1.jpg" data-lightbox="france"><img id="france1" src="images/france1.jpg" alt="Bagages">
+          <a href="images/france1.jpg" data-lightbox="france" data-title="France">
+          <h3>France</h3>
+          <img id="france1" src="images/france1.jpg" alt="Bagages">
           </a>
         <span class=nextimage>
           <a href="images/france2.jpg" data-lightbox="france">Image #2</a>
@@ -199,7 +223,9 @@
       </div>
 
       <div id="sanfran">
-          <a href="images/sanfran1.jpg" data-lightbox="sanfran"><img id="sanfran1" src="images/sanfran1.jpg" alt="Bay to Breakers">
+          <a href="images/sanfran1.jpg" data-lightbox="sanfran" data-title="San Francisco, California">
+          <h3>San Francisco, CA</h3>
+          <img id="sanfran1" src="images/sanfran1.jpg" alt="Bay to Breakers">
           </a>
         <span class=nextimage>
           <a href="images/sanfran2.jpg" data-lightbox="sanfran">Image #2</a>
@@ -214,7 +240,9 @@
       </div>
 
       <div id="misc">
-           <a href="images/misc1.jpg" data-lightbox="misc"><img id="misc1" src="images/misc1.jpg" alt="cactus">
+           <a href="images/misc1.jpg" data-lightbox="misc" data-title="Miscellaneous">
+          <h3>Miscellaneous</h3>
+           <img id="misc1" src="images/misc1.jpg" alt="cactus">
           </a>
         <span class=nextimage>
           <a href="images/misc2.jpg" data-lightbox="misc">Image #2</a>
@@ -248,20 +276,25 @@
       <img id="carlybrandess" src="images/me4.jpg" alt="Carly Brandess">
       <article id="aboutme">
         <h1 id="aboutphotog">About the Photographer</h1>
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+        <p>With a love of photography that was fostered at a young age, I have been playing around with a camera for most of my life. That married with a passion for travel has introduced me to a vast world of exploring cultures, landscapes, and people through the lens of my camera. I thrill in discovering beauty in what both nature and humans have created and in attempting to suspend these moments in time. Recently, I traveled to Iceland and stepped into a place that was other-worldly. My camera served as an opportunity to see this wondrous place through a new light and to bring a piece of it home with me. I have found though, through all of my travels, that home serves as just as great a landscape of people and places to photograph. As a born and raised Chicagoan, I have been gifted with four unique and rich seasons that each bring their own light and shadows. Lake Michigan frozen over with beaches covered in fresh, white snow, is purely peaceful to behold. </p>
       </article>
     </div>
     <div id="extender">
     </div>
   </div>  
 
-  <footer>    
+  <footer> 
+    <div class="inner-container">
+        <ul class="social-links">
+          <li><a href="https://www.facebook.com/Carly-Brandess-Photography-1223606267654253/?skip_nax_wizard=true"><img src="images/twitterlogo.png" alt="Facebook icon"></a></li>
+          <li><a href="https://www.instagram.com/cbrands83/"><img src="images/instagramlogo.png" alt="Instagram icon"></a></li>
+          <li><a href="https://www.linkedin.com/in/carlybrandess"><img src="images/linkedinlogo.png" alt="LinkedIn icon"></a></li>
+        </ul>
+      </div>   
   </footer>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-  <script src="js/main.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src="js/main.js"></script>
   <script src="js/lightbox.min.js"></script>
 
 </body>

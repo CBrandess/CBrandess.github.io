@@ -1,12 +1,10 @@
-// When user clicks on about me link in nav bar the corresponding page loads.
-
-// When user clicks on photography link in nav bar the corresponding page loads.
-
-
 // When user clicks on contact in nav bar a form pops up.
 	// user enters name, email address, and message
-	// when user pushes send button the email is sent and form is cleared from the window. 
+	// when user pushes send button the email is sent and form is cleared from the window.
 
+$('.getintouch').on('click', function() {
+	$('.dropdown-menu').slideToggle();
+});
 
 function cycleBackgrounds() {
 	var index = 0;
@@ -22,6 +20,9 @@ function cycleBackgrounds() {
 		// Hide the previous image.
 
 	}, 3000);
+
+
+
 };
 
 // Document Ready.
