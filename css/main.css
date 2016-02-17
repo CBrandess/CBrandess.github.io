@@ -332,6 +332,18 @@ footer {
   margin-top: 30px;
 }
 
+.thankyou {
+	background-color: #333;
+	color: white;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	padding: 20%;
+	margin-bottom: 0;
+	text-decoration: none;
+	list-style-type: none;
+
+}
 
 
 
