@@ -17,9 +17,16 @@
       <div class="logo">
         <a><img id='logo' src="images/CBlogo.jpg" alt="logo"></a>
       </div>
-      <nav>
-        <ul>
-          <li><a href="index.html#bannerpage">Home</a></li>
+      <nav class="hamburgernav">
+        <div class = "mainNav clearfix">
+          <div class="menu-link-wrapper">
+            <div class="menu-link">
+              <span class="lines"></span>
+            </div>
+          </div>
+        </div>
+        <ul class="mainNavDropDown clearfix">
+          <li id="home"><a href="index.html#bannerpage">Home</a></li>
           <li><a href="index.html#phototop">Photography</a></li>
           <li><a href="index.html#aboutmepage">About Me</a>
           <li class="dropdown"><a class="dropdown-toggle getintouch" data-toggle="dropdown" href="#">Get in Touch</a>
@@ -37,6 +44,51 @@
           </li>
         </ul>
       </nav>
+      <nav>
+        <ul id="menu">
+          <li><a href="index.html#bannerpage">Home</a></li>
+          <li><a href="index.html#phototop">Photography</a></li>
+          <li><a href="index.html#aboutmepage">About Me</a>
+          <li class="dropdown"><a class="dropdown-toggle getintouch" data-toggle="dropdown" href="#">Get in Touch</a>
+            <div class="dropdown-menu">
+              <form action="//formspree.io/carlybrandess@gmail.com" method="POST" data-parsley-validate>
+              <label for="name">Name:</label>
+              <input id="name" type="text" name="name" placeholder="Name" required="true" data-parsley-error-message="Please enter a name">
+              <label id="email" for="email">Email:</label>
+              <input type="email" name="_replyto" placeholder="Email" required="true" data-parsley-type="email" data-parsley-error-message="Please enter a valid email">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" cols="30" rows="10"></textarea>
+              <input type="hidden" name="_next" value="thanks.html"/>
+              <input type="submit" value="Send" id="button">
+            </form>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="open">
+      <span class="cls"></span>
+      <span>
+        <ul class="sub-menu ">
+          <li><a href="index.html#bannerpage">Home</a></li>
+          <li><a href="index.html#phototop">Photography</a></li>
+          <li><a href="index.html#aboutmepage">About Me</a>
+          <li class="dropdown"><a class="dropdown-toggle getintouch" data-toggle="dropdown" href="#">Get in Touch</a>
+            <div class="dropdown-menu">
+              <form action="//formspree.io/carlybrandess@gmail.com" method="POST" data-parsley-validate>
+              <label for="name">Name:</label>
+              <input id="name" type="text" name="name" placeholder="Name" required="true" data-parsley-error-message="Please enter a name">
+              <label id="email" for="email">Email:</label>
+              <input type="email" name="_replyto" placeholder="Email" required="true" data-parsley-type="email" data-parsley-error-message="Please enter a valid email">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" cols="30" rows="10"></textarea>
+              <input type="hidden" name="_next" value="thanks.html"/>
+              <input type="submit" value="Send" class="button">
+            </form>
+          </li>  
+        </ul>
+      </span>
+      <span class="cls"></span>
     </div>
   </header>
   
@@ -53,7 +105,7 @@
   <div id="phototop"></div>
   <div class="photographypage clearfix">
     <div class="photos clearfix">
-      <div id="italy">
+      <div class="italy">
           <a href="images/italy1.jpg" data-lightbox="italy" data-title="Italy">
           <h3>Italy</h3>    
           <img id="italy1" src="images/italy1.jpg" alt="Walking Capri Couple"></a>
@@ -75,7 +127,7 @@
         </span> 
       </div>
 
-      <div id="iceland">
+      <div class="iceland">
           <a href="images/iceland1.jpg" data-lightbox="iceland" data-title="Iceland">
           <h3>Iceland</h3>
           <img id="iceland1" src="images/iceland1.jpg" alt="Waterfall and Benches"></a>
@@ -113,7 +165,7 @@
         </span>
       </div>
 
-      <div id="ireland">
+      <div class="ireland">
           <a href="images/ireland1.jpg" data-lightbox="ireland" data-title="Ireland">
           <h3>Ireland</h3>
           <img id="ireland1" src="images/ireland1.jpg" alt="Abbey"></a>
@@ -146,7 +198,7 @@
           </span>
       </div>
 
-      <div id="israel">
+      <div class="israel">
           <a href="images/israel26.jpg" data-lightbox="israel" data-title="Israel">
           <h3>Israel</h3>
           <img id="israel1" src="images/israel26.jpg" alt="Jewish Star Window">
@@ -172,7 +224,7 @@
         </span>
       </div>
 
-      <div id="sedona">
+      <div class="sedona">
           <a href="images/sedona1.jpg" data-lightbox="sedona" data-title="Sedona, Arizona">
           <h3>Sedona, AZ</h3>
           <img id="sedona1" src="images/sedona1.jpg" alt="Spider Web">
@@ -189,7 +241,7 @@
         </span>
       </div>
 
-      <div id="france">
+      <div class="france">
           <a href="images/france1.jpg" data-lightbox="france" data-title="France">
           <h3>France</h3>
           <img id="france1" src="images/france1.jpg" alt="Bagages">
@@ -221,7 +273,7 @@
         </span>
       </div>
 
-      <div id="sanfran">
+      <div class="sanfran">
           <a href="images/sanfran1.jpg" data-lightbox="sanfran" data-title="San Francisco, California">
           <h3>San Francisco, CA</h3>
           <img id="sanfran1" src="images/sanfran1.jpg" alt="Bay to Breakers">
@@ -238,7 +290,7 @@
         </span>
       </div>
 
-      <div id="misc">
+      <div class="misc">
            <a href="images/misc1.jpg" data-lightbox="misc" data-title="Miscellaneous">
           <h3>Miscellaneous</h3>
            <img id="misc1" src="images/misc1.jpg" alt="cactus">
@@ -275,7 +327,7 @@
       <img id="carlybrandess" src="images/me4.jpg" alt="Carly Brandess">
       <article id="aboutme">
         <h1 id="aboutphotog">About the Photographer</h1>
-        <p>With a love of photography that was fostered at a young age, I have been playing around with a camera for most of my life. That married with a passion for travel has introduced me to a vast world of exploring cultures, landscapes, and people through the lens of my camera. I thrill in discovering beauty in what both nature and humans have created and in attempting to suspend these moments in time. Recently, I traveled to Iceland and stepped into a place that was other-worldly. My camera served as an opportunity to see this wondrous place through a new light and to bring a piece of it home with me. I have found though, through all of my travels, that home serves as just as great a landscape of people and places to photograph. As a born and raised Chicagoan, I have been gifted with four unique and rich seasons that each bring their own light and shadows. Lake Michigan frozen over with beaches covered in fresh, white snow, is purely peaceful to behold. </p>
+        <p>With a love of photography that was fostered at a young age, I have been playing around with a camera for most of my life. That married with a passion for travel has introduced me to a vast world of exploring cultures, landscapes, and people through the lens of my camera. I thrill in discovering beauty in what both nature and humans have created and in attempting to suspend these moments in time. Recently, I traveled to Iceland and stepped into a place that was other-worldly. My camera served as an opportunity to see this wondrous place through a new light and to bring a piece of it home with me. I have found though, through all of my travels, that home serves as just as great a landscape of people and places to photograph. As a born and raised Chicagoan, I have been gifted with four unique and rich seasons that each bring their own light and shadows.</p>
       </article>
     </div>
     <div id="extender">
